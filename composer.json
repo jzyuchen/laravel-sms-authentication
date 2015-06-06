@@ -10,7 +10,8 @@
     ],
     "require": {
       "php": ">=5.3.3",
-      "illuminate/support": "5.*"
+      "illuminate/support": "5.*",
+      "jzyuchen/sms": "0.2"
     },
     "autoload": {
         "psr-4": {

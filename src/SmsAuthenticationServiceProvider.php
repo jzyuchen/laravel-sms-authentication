@@ -21,10 +21,11 @@ class SmsAuthenticationServiceProvider extends ServiceProvider {
             $config     => config_path('sms-auth.php'),
         ]);
 
-        $mFrom = __DIR__ . '/../migrations/';
-        $mTo = $this->app['path.database'] . '/migrations/';
+        $mFrom = realpath(__DIR__.'/../migrations/2015_06_06_000001_create_sms_table.php');
+
+        $mTo = $this->app['path.database'] . '/migrations/2015_06_06_000001_create_sms_table.php';
         $this->publishes([
-            $mFrom . '2015_06_06_000001_create_sms_table.php' => $mTo . '2015_06_06_000001_create_sms_table.php',
+            $mFrom => $mTo,
         ]);
     }
     /**

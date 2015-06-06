@@ -9,15 +9,16 @@
 namespace Jzyuchen\SmsAuthentication;
 
 
+use DB;
 use Jzyuchen\SMS\Facade\Sms;
 
 class SmsAuth {
 
     private $config;
 
-    public function __construct($config = [])
+    public function __construct()
     {
-        $this->config = $config;
+        $this->config = \Config::get('sms-auth');
     }
 
     public function sendRegisterCode($mobile, $codeSize)
