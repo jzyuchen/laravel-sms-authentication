@@ -1,0 +1,20 @@
+{
+    "name": "jzyuchen/sms-authentication",
+    "description": "sms authentication for laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jzyuchen",
+            "email": "jzyuchen@163.com"
+        }
+    ],
+    "require": {
+      "php": ">=5.3.3",
+      "illuminate/support": "5.*"
+    },
+    "autoload": {
+        "psr-4": {
+          "Jzyuchen\\SmsAuthentication\\": "src/"
+        }
+  }
+}
